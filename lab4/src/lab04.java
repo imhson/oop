@@ -18,9 +18,9 @@ public class lab04 {
         double BMI=(weight)/height*height;
         if (BMI<18.5)
             return "Thieu can";
-        if (BMI<=22.99)
+        if (BMI<23)
             return "Binh thuong";
-        if (BMI<=24.99)
+        if (BMI<25)
             return "Thua can";
         else
             return "Beo phi";
