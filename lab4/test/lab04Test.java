@@ -78,56 +78,56 @@ public class lab04Test {
     }
      @Test
     public void testFindMin2(){
-        int[] array={6,2,2,3,4,5};
+        int[] array={2,6,7,3,4,5,8};
         int result= lab04.findMin(array);
         assertEquals(2,result);
     }
     @Test
     public void testFindMin3(){
-        int[] array={6,2,2,3,4,5};
+        int[] array={6,10,9,6,4,3};
         int result= lab04.findMin(array);
-        assertEquals(2,result);
+        assertEquals(3,result);
     }
     @Test
     public void testFindMin4(){
-        int[] array={6,2,2,3,4,5};
+        int[] array={6,12,21,3,4,5};
         int result= lab04.findMin(array);
-        assertEquals(2,result);
+        assertEquals(3,result);
     }
     @Test
     public void testFindMin5(){
-        int[] array={6,2,2,3,4,5};
+        int[] array={16,22,24,33,4,15};
         int result= lab04.findMin(array);
-        assertEquals(2,result);
+        assertEquals(4,result);
     }
     @Test
     public void testFindBMI(){
-        double h=1.7;
-        double w=60;
+        double h=1.9;
+        double w=50.0;
         String rerult= lab04.findBMI(w,h );
-        String expResult="Beo phi";
+        String expResult="Thieu can";
         assertEquals(expResult, rerult);
     }
         @Test
     public void testFindBMI2(){
-        double h=1.7;
-        double w=60;
+        double h=1.56;
+        double w=41.0;
         String rerult= lab04.findBMI(w,h );
-        String expResult="Beo phi";
+        String expResult="Thieu can";
         assertEquals(expResult, rerult);
     }
     @Test
     public void testFindBMI3(){
-        double h=1.7;
-        double w=60;
+        double h=1.8;
+        double w=60.0;
         String rerult= lab04.findBMI(w,h );
-        String expResult="Beo phi";
+        String expResult="Binh thuong";
         assertEquals(expResult, rerult);
     }
     @Test
     public void testFindBMI4(){
-        double h=1.7;
-        double w=60;
+        double h=1.2;
+        double w=40.0;
         String rerult= lab04.findBMI(w,h );
         String expResult="Beo phi";
         assertEquals(expResult, rerult);
@@ -137,7 +137,7 @@ public class lab04Test {
         double h=1.7;
         double w=60;
         String rerult= lab04.findBMI(w,h );
-        String expResult="Beo phi";
+        String expResult="Binh thuong";
         assertEquals(expResult, rerult);
     }
 
