@@ -1,0 +1,2 @@
+- Co 3 quan he ke thua. Boi vì lop rectangle có nhung thuoc tính không phù hop voi lop Circle và nguoc lai.
+- Vì Pi là hang so nên nên de bien PI là bien final de tránh thay doi giá tri bien PI, gây sai sót trong quá trình tính toán.
