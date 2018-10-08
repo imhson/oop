@@ -1,4 +1,4 @@
-public class Rectangle extends Shape{
+public class Rectangle extends Shape{                                           //lop rectangle ke thua lop shape
     double width = 1.0;
     double length = 1.0;
 

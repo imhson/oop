@@ -1,4 +1,4 @@
-public class Circle extends Shape {
+public class Circle extends Shape {                                             //lop circlwe ke thua lop shape
     double radius = 1.0;
     final double PI;
 
@@ -10,10 +10,10 @@ public class Circle extends Shape {
         this.radius= radius;
     }
     public Circle (double radius, String color, boolean filled){
+        super(color,filled);
         this.PI = 3.14;
         this.radius= radius;
-        this.color= color;
-        this.filled= filled;
+        
     }
 
     public double getRadius() {

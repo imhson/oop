@@ -1,4 +1,4 @@
-public class Square extends Rectangle {
+public class Square extends Rectangle {                                         //lop square ke thua lop rectangle
     double side;
     public Square() {
     }
@@ -18,16 +18,19 @@ public class Square extends Rectangle {
     }
 
     public void setSide(double side) {
-        this.side = side;
+        super.length= side;
+        super.width = side;
     }
     @Override
     public void setWidth (double side){
-        this.width = side;
+        super.length= side;
+        super.width = side;
     }
 
     @Override
     public void setLength(double side) {
-        this.length = side;
+        super.length= side;
+        super.width = side;
     }
 
     @Override

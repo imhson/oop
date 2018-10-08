@@ -1,4 +1,4 @@
-public class Qua_Tao extends Hoa_Qua {
+public class Qua_Tao extends Hoa_Qua {                                          //Lop Qua_Tao ke thua lop Hoa_Qua
     String loai_tao;
     boolean co_hat;
     String vi;

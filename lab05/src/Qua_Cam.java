@@ -1,4 +1,4 @@
-public class Qua_Cam extends Hoa_Qua {
+public class Qua_Cam extends Hoa_Qua {                                          //lop Qua_Cam ke thua lop Hoa_Qua
     String loai_cam;
     String vi;
     String cat_hay_boc_vo;
