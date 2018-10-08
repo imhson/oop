@@ -23,10 +23,10 @@ public class Circle extends Shape {
     public void setRadius(double radius) {
         this.radius = radius;
     }
-    public double getArea(double radius){
+    public double getArea(){
         return PI*radius*radius;
     }
-    public double getPerimeter (double radius){
+    public double getPerimeter (){
         return 2*PI*radius;
     }
 

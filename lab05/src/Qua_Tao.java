@@ -33,6 +33,11 @@ public class Qua_Tao extends Hoa_Qua {
         this.vi = vi;
     }
 
+    @Override
+    public String toString() {
+        return "Qua_Tao{" + "loai_tao=" + loai_tao + ", co_hat=" + co_hat + ", vi=" + vi + '}';
+    }
+
     
     
 }

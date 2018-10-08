@@ -35,5 +35,10 @@ public class Qua_Cam extends Hoa_Qua {
     public void setMau_sac_khi_chin(String mau_sac_khi_chin) {
         this.mau_sac_khi_chin = mau_sac_khi_chin;
     }
+
+    @Override
+    public String toString() {
+        return "Qua_Cam{" + "loai_cam=" + loai_cam + ", vi=" + vi + ", cat_hay_boc_vo=" + cat_hay_boc_vo + ", mau_sac_khi_chin=" + mau_sac_khi_chin + '}';
+    }
     
 }
