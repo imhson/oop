@@ -5,11 +5,13 @@
  */
 package lab06;
 
+import java.util.Vector;
+
 /**
  *
  * @author Hoangson
  */
-public class Layer extends Diagram {
+public class Layer extends Vector<Shape> {
     boolean visible;
 
     public boolean isVisible() {
@@ -20,6 +22,11 @@ public class Layer extends Diagram {
         this.visible = visible;
     }
     public void deleteTriagle (){
-        
+        for (int i=0;i<this.size();i++){
+            if (this.elementAt(i) instanceof Triagle){
+                this.remove(i);
+            }
+        }
     }
+    
 }
