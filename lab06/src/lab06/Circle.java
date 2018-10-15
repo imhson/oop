@@ -12,8 +12,8 @@ public class Circle extends Shape {                                             
         this.PI = 3.14;
         this.radius= radius;
     }
-    public Circle (double radius, String color, boolean filled){
-        super(color,filled);
+    public Circle (double radius, String color, boolean filled,XY xy){
+        super(color,filled,xy);
         this.PI = 3.14;
         this.radius= radius;
         

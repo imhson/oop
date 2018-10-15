@@ -12,7 +12,6 @@ package lab06;
 public class Rectangle extends Shape{                                           //lop rectangle ke thua lop shape
     double width = 1.0;
     double length = 1.0;
-
     public Rectangle() {
     }
     public Rectangle (double width, double length){
@@ -20,8 +19,8 @@ public class Rectangle extends Shape{                                           
         this.length= length;
     }
 
-    public Rectangle(String color, boolean filled,double width, double length) {
-        super(color, filled);
+    public Rectangle(String color, boolean filled,XY xy,double width, double length) {
+        super(color, filled,xy);
         this.width= width;
         this.length= length;
     }
