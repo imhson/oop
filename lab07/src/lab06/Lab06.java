@@ -26,24 +26,29 @@ public class Lab06 extends Application {
         layer.add(layer1);
         layer.add(layer2);
         Diagram<Shape> diagram = new Diagram();
-        CircleObject circleObject = new CircleObject(new XYlocation(200, 150), 70);
-                        
+        CircleObject circleObject = new CircleObject(new XYlocation(200, 150), 70,Color.CORAL);
+        CircleObject circleObject2 = new CircleObject(new XYlocation(300, 100), 70,Color.CHOCOLATE);
+                                                
         //di chuyen vat the
         XYlocation newLocation = new XYlocation(300, 100);
         circleObject.moving(newLocation);
 
         //them doi tuong vao cac layer
         layer1.add(circleObject);
-        layer1.add(circleObject);
+        layer1.add(circleObject2);
         layer1.add(new CircleObject(new XYlocation(100, 100), 50,Color.AQUA));
         layer2.add(new TriangleObject(new XYlocation(200, 200), new XYlocation(300, 200), new XYlocation(300, 300),Color.BLUE));
         layer1.add(new SquareObject(new XYlocation(400, 200),50,Color.YELLOW));
         layer2.add(new SquareObject(new XYlocation(450, 150),50,Color.BROWN));
+        layer2.add(new HexagonObject(new XYlocation(100, 300), 50, Color.HOTPINK));
         
         //dat visible cac layer la true
         layer1.setVisible(true);
         layer2.setVisible(true);
+        
         layer1.deleteSameObject();
+        //layer.get(1).deleteTriangleObject();
+        
         //them doi tuong vao diagram
         for (int i=0;i<layer.size();i++){
             if (layer.get(i).visible==true){
@@ -51,12 +56,14 @@ public class Lab06 extends Application {
             }
         }
         
+        diagram.sortObject();
+        
         //ve cac hinh
         primaryStage.setTitle("Lab 06");
         Group group = new Group();
         
         //diagram.deleteCircleObject();
-        //layer.get(1).deleteTriangleObject();
+
         for (ArrayList<Shape> elementLayer : diagram){
             for (Shape elementShape : elementLayer ) {
             if (elementShape instanceof CircleObject){
@@ -69,9 +76,7 @@ public class Lab06 extends Application {
             if (elementShape instanceof TriangleObject){
                 
                 //ve tam gia bang toa do 3 dinh
-                Polygon triangle = new Polygon( ((TriangleObject) elementShape).vertice1.x,((TriangleObject) elementShape).vertice1.y,
-                        ((TriangleObject) elementShape).vertice2.x,((TriangleObject) elementShape).vertice2.y,
-                        ((TriangleObject) elementShape).vertice3.x,((TriangleObject) elementShape).vertice3.y);
+                Polygon triangle = new Polygon( ((TriangleObject) elementShape).points);
                 triangle.setFill(((TriangleObject) elementShape).color);
                 group.getChildren().add(triangle);
             }
@@ -82,6 +87,11 @@ public class Lab06 extends Application {
                 rectangle.setLayoutX(((RectangleObject) elementShape).center.x-((RectangleObject) elementShape).length/2);
                 rectangle.setLayoutY(((RectangleObject) elementShape).center.y-((RectangleObject) elementShape).width/2);
                 group.getChildren().addAll(rectangle);
+            }
+            if (elementShape instanceof HexagonObject){
+                Polygon hexagon = new Polygon(((HexagonObject) elementShape).points);
+                hexagon.setFill(((HexagonObject)elementShape).color);
+                group.getChildren().add(hexagon);
             }
         
     }

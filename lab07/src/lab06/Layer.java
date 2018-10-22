@@ -47,9 +47,43 @@ public class Layer<Shape> extends ArrayList<Shape>{
             for (int j=i+1;j<this.size();j++){
                 if (this.get(i) instanceof CircleObject){
                     if (this.get(j) instanceof CircleObject){
-                        
+                        if (((CircleObject)this.get(i)).center==((CircleObject)this.get(j)).center){
+                            if (((CircleObject)this.get(i)).radius==((CircleObject)this.get(j)).radius){
+                                this.remove(j);
+                                j--;
+                            }
+                        }
                     }
                 }
+                if (this.get(i) instanceof TriangleObject){
+                    if (this.get(j) instanceof TriangleObject){
+                        if (((TriangleObject)this.get(i)).points==((TriangleObject)this.get(j)).points){
+                            this.remove(j);
+                            j--;
+                        }
+                    }
+                }
+                if (this.get(i) instanceof RectangleObject){
+                    if (this.get(j) instanceof RectangleObject){
+                        if (((RectangleObject)this.get(i)).center==((RectangleObject)this.get(j)).center){
+                            if (((RectangleObject)this.get(i)).width==((RectangleObject)this.get(j)).width){
+                                if (((RectangleObject)this.get(i)).length==((RectangleObject)this.get(j)).length){
+                                    this.remove(j);
+                                    j--;
+                                }
+                            }
+                        }
+                    }
+                }
+                if (this.get(i) instanceof HexagonObject){
+                    if (this.get(j) instanceof HexagonObject){
+                        if (((HexagonObject)this.get(i)).points==((HexagonObject)this.get(j)).points){
+                            this.remove(j);
+                            j--;
+                        }
+                    }
+                }
+
             }
         }
     }

@@ -33,5 +33,25 @@ public class Diagram<Shape> extends ArrayList<ArrayList<Shape>>{
              }
         }
     }
+    public void sortObject(){
+        Layer layer_circleObject = new Layer();
+        Layer layer_triangleObject = new Layer();
+        Layer layer_rectangleObject = new Layer();
+        for (int j=0;j<this.size();j++) {
+            ArrayList<Shape> element = this.get(j);
+             for (int i=0;i<element.size();i++){
+                 if (element.get(i) instanceof CircleObject)
+                     layer_circleObject.add(element.get(i));
+                 if (element.get(i) instanceof TriangleObject)
+                     layer_triangleObject.add(element.get(i));
+                 if (element.get(i) instanceof RectangleObject)
+                     layer_rectangleObject.add(element.get(i));
+             }
+             this.remove(j);
+        }
+        this.add(layer_circleObject);
+        this.add(layer_rectangleObject);
+        this.add(layer_triangleObject);
+    }
 
 }
