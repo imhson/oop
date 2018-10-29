@@ -10,7 +10,7 @@ package lab08;
  * @author Hoangson
  */
 public class ClassCastException {
-    public static void main(String[] args) throws java.lang.ClassCastException {
+    public static void main(String[] args)  {
         try{
             Object num = new Integer(0); // TODO code application logic here
             System.out.println((String)num);;

@@ -30,7 +30,7 @@ public class Sutraction extends BinaryExpression{
 
     @Override
     public String toString() {
-        return "Sutraction{" + "left=" + left + ", right=" + right + '}';
+        return left.toString() + "-" + right.toString();
     }
 
     @Override

@@ -14,7 +14,7 @@ public class ArithmeticException {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws java.lang.ArithmeticException {
+    public static void main(String[] args) {
         try{
             System.out.println(1/0);
         }

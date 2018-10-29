@@ -18,7 +18,7 @@ public class Square extends Expression{
 
     @Override
     public String toString() {
-        return "Square{" + "expression=" + expression + '}';
+        return "("+ expression.toString() + ")^2";
     }
     
 

@@ -32,7 +32,7 @@ public class Addition extends BinaryExpression{
 
     @Override
     public String toString() {
-        return "Addition{" + "left=" + left + ", right=" + right + '}';
+        return left.toString() + "+" + right.toString();
     }
     
     @Override

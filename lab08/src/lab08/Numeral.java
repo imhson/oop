@@ -32,7 +32,7 @@ public class Numeral extends Expression {
 
     @Override
     public String toString() {
-        return "Numeral{" + "value=" + value + '}';
+        return "" + value;
     }
 
 

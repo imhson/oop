@@ -30,7 +30,7 @@ public class Division extends BinaryExpression{
 
     @Override
     public String toString() {
-        return "Division" + "left=" + left + ", right=" + right + '}';
+        return left.toString() + "/" + right.toString();
     }
 
     @Override

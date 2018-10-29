@@ -11,7 +11,7 @@ package lab08;
  */
 public class NullPointerException {
 
-    public static void main(String[] args) throws java.lang.NullPointerException{
+    public static void main(String[] args) {
         try{
         Object num = null;
         num.toString();

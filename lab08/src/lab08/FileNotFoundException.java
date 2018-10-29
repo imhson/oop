@@ -18,7 +18,7 @@ public class FileNotFoundException {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws java.io.FileNotFoundException {
+    public static void main(String[] args) {
         try{
             File file = new File("CuocSongMa.txt");
             InputStream is = new FileInputStream(file);
